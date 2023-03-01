@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import AddNewSong from "./Components/AddNewSong/AddNewSong"
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -23,7 +24,8 @@ function App() {
     // </>
     <div>
       <h1>Music Library</h1>
-      <table>
+      <AddNewSong />
+      {/* <table>
         <thead>
           <tr>
             <th>Song Title</th>
@@ -36,7 +38,7 @@ function App() {
         <tbody>
           <tr></tr>
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 }

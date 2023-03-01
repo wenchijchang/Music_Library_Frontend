@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import Input from "../Input/Input";
 
-const AddNewSong = () => {
+const AddNewSong = (props) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
   const [releaseDate, setReleaseDate] = useState();
   const [genre, setGenre] = useState("");
-  const [likes, setLikes] = useState(0);
+  // const [likes, setLikes] = useState(0);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -16,7 +17,8 @@ const AddNewSong = () => {
       album: album,
       releaseDate: releaseDate,
       genre: genre,
-      likes: likes,
+      // likes: 0,
+      // dislikes: 0,
     };
     props.addSong(newSong);
     setTitle("");
@@ -24,21 +26,25 @@ const AddNewSong = () => {
     setAlbum("");
     setReleaseDate("");
     setGenre("");
-    setLikes(0);
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
+        {/* <div>
           <label>Title</label>
           <input
             type="text"
             value={title}
             onChange={(event) => setTitle(event.target.value)}
           ></input>
-        </div>
-        <div>
+        </div> */}
+        <Input label={"Title"} type={"text"} value={title} onChange={(event) => setTitle(event.target.value)} />
+        <Input label={"Artist"} type={"text"} value={artist} onChange={(event) => setArtist(event.target.value)} />
+        <Input label={"Album"} type={"text"} value={album} onChange={(event) => setAlbum(event.target.value)} />
+        <Input label={"Release Date"} type={"date"} value={releaseDate} onChange={(event) => setReleaseDate(event.target.value)} />
+        <Input label={"Genre"} type={"text"} value={genre} onChange={(event) => setGenre(event.target.value)} />
+        {/* <div>
           <label>Artist</label>
           <input
             type="text"
@@ -69,9 +75,11 @@ const AddNewSong = () => {
             value={genre}
             onChange={(event) => setGenre(event.target.value)}
           ></input>
-        </div>
+        </div> */}
         <button type="submit">Submit</button>
       </form>
     </div>
   );
 };
+
+export default AddNewSong;
