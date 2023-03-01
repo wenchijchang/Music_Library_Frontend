@@ -15,6 +15,12 @@ function App() {
   }
 
   return (
+    // <>
+    //   <NavBar />
+    //   <AddNewSong />
+    //   <SearchBar />
+    //   <DisplaySongs />
+    // </>
     <div>
       <h1>Music Library</h1>
       <table>
@@ -36,3 +42,20 @@ function App() {
 }
 
 export default App;
+
+// [20songs]
+// return(
+//   <ul>
+//     {props.array.map( item => <SongItem key={item.id} song={item}/>)}
+//   </ul>
+// )
+
+// const SongItem = (props) => {
+//   return (
+//     <li>
+//       <div>
+
+//       </div>
+//     </li>
+//    );
+// }
