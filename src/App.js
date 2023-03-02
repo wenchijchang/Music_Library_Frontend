@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AddNewSong from "./Components/AddNewSong/AddNewSong"
+import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -25,6 +26,8 @@ function App() {
     <div>
       <h1>Music Library</h1>
       <AddNewSong />
+
+      <DisplaySongs parentSongs={songs}/>
       {/* <table>
         <thead>
           <tr>

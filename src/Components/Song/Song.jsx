@@ -1,11 +1,16 @@
+import React from 'react';
+
+
 const Song = (props) => {
   return (
     <li>
-      <div>{props.title}</div>
-      <div>{props.artist}</div>
-      <div>{props.album}</div>
-      <div>{props.releaseDate}</div>
-      <div>{props.genre}</div>
+      <div>
+        {props.title}
+        {props.artist}
+        {props.album}
+        {props.releaseDate}
+        {props.genre}
+      </div>
     </li>
   );
 };
