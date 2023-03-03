@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import NavBar from "./Components/NavBar/NavBar";
 import AddNewSong from "./Components/AddNewSong/AddNewSong"
 import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
 
@@ -17,31 +18,11 @@ function App() {
   }
 
   return (
-    // <>
-    //   <NavBar />
-    //   <AddNewSong />
-    //   <SearchBar />
-    //   <DisplaySongs />
-    // </>
     <div>
-      <h1>Music Library</h1>
+      <NavBar />
       <AddNewSong />
-
+      {/* //   <SearchBar /> */}
       <DisplaySongs parentSongs={songs}/>
-      {/* <table>
-        <thead>
-          <tr>
-            <th>Song Title</th>
-            <th>Album</th>
-            <th>Artist</th>
-            <th>Genre</th>
-            <th>Release Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr></tr>
-        </tbody>
-      </table> */}
     </div>
   );
 }
