@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "./Components/NavBar/NavBar";
-import AddNewSong from "./Components/AddNewSong/AddNewSong"
+import AddNewSong from "./Components/AddNewSong/AddNewSong";
 import DisplaySongs from "./Components/DisplaySongs/DisplaySongs";
+import SearchBar from "./Components/SearchBar/SearchBar";
 
 function App() {
   const [songs, setSongs] = useState([]);
+  const [userInput, setUserInput] = useState("");
 
   useEffect(() => {
     getAllSongs();
@@ -20,9 +22,13 @@ function App() {
   return (
     <div>
       <NavBar />
-      <AddNewSong />
-      {/* //   <SearchBar /> */}
-      <DisplaySongs parentSongs={songs}/>
+      <AddNewSong getAllSongs={getAllSongs} />
+      <SearchBar userInput={userInput} setUserInput={setUserInput} />
+      <DisplaySongs
+        getAllSongs={getAllSongs}
+        songs={songs}
+        userInput={userInput}
+      />
     </div>
   );
 }
