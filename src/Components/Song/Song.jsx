@@ -7,9 +7,9 @@ const Song = ({ song, getAllSongs }) => {
       <div className="container">
         <div>{"Title: " + song.title}</div>
         <div>
-          {"Artist: " + song.artist}
-          {"Album: " + song.album}
-          {"Release Date: " + song.release_date}
+          {"Artist: " + song.artist + " "}
+          {"Album: " + song.album + " "}
+          {"Release Date: " + song.release_date + " "}
           {"Genre: " + song.genre}
         </div>
         <DeleteSong id={song.id} getAllSongs={getAllSongs} />
