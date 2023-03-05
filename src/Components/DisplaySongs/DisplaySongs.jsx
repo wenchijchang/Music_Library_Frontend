@@ -1,4 +1,5 @@
 import Song from "../Song/Song";
+import "./DisplaySongs.css";
 
 const DisplaySongs = ({ songs, getAllSongs, userInput }) => {
   return (

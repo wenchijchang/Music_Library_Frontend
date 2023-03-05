@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../Input/Input";
 import axios from "axios";
+import "./AddNewSong.css";
 
 // async function addNewSong(song){
 //     await axios({
@@ -45,46 +46,54 @@ const AddNewSong = ({ getAllSongs }) => {
   };
 
   return (
-    <div>
+    <div className="form-group">
       <form onSubmit={handleSubmit}>
-        {/* <div>
-          <label>Title</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-          ></input>
-        </div> */}
+        <h3>Add New Song</h3>
         <Input
+          className="form-control"
           label={"Title"}
           type={"text"}
           value={title}
           onChange={(event) => setTitle(event.target.value)}
+          style={{ marginBottom: "1em" }}
         />
         <Input
+          className="form-control"
           label={"Artist"}
           type={"text"}
           value={artist}
           onChange={(event) => setArtist(event.target.value)}
         />
         <Input
+          className="form-control"
           label={"Album"}
           type={"text"}
           value={album}
           onChange={(event) => setAlbum(event.target.value)}
         />
         <Input
+          className="form-control"
           label={"Release Date"}
           type={"date"}
           value={releaseDate}
           onChange={(event) => setReleaseDate(event.target.value)}
         />
         <Input
+          className="form-control"
           label={"Genre"}
           type={"text"}
           value={genre}
           onChange={(event) => setGenre(event.target.value)}
         />
+        {/* </div> */}
+        {/* <div>
+            <label>Title</label>
+            <input
+              type="text"
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
+            ></input>
+          </div> */}
         {/* <div>
           <label>Artist</label>
           <input
@@ -117,7 +126,9 @@ const AddNewSong = ({ getAllSongs }) => {
             onChange={(event) => setGenre(event.target.value)}
           ></input>
         </div> */}
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -2,8 +2,8 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-  width: 80%;
-  margin: 1rem auto;
+  width: 100%;
+  margin-bottom: 10em;
   background-color: royalblue;
 }
 .navbar h1 {

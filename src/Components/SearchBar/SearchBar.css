@@ -1,0 +1,6 @@
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: large;
+  font-weight: 600;
+}

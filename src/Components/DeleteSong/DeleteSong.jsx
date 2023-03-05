@@ -11,7 +11,13 @@ const DeleteSong = ({ id, getAllSongs }) => {
       getAllSongs();
     }
   };
-  return <button onClick={(e) => handleClick(e)}>Delete</button>;
+  return (
+    <div style={{ textAlign: "right" }}>
+      <button className="button" onClick={(e) => handleClick(e)}>
+        Delete
+      </button>
+    </div>
+  );
 };
 export default DeleteSong;
 
