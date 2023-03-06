@@ -23,22 +23,20 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="content">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="border-box">
-                <AddNewSong getAllSongs={getAllSongs} />
-              </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <div className="border-box">
+              <AddNewSong getAllSongs={getAllSongs} />
             </div>
-            <div className="col-md-6">
-              <SearchBar userInput={userInput} setUserInput={setUserInput} />
-              <DisplaySongs
-                getAllSongs={getAllSongs}
-                songs={songs}
-                userInput={userInput}
-              />
-            </div>
+          </div>
+          <div className="col-md-6">
+            <SearchBar userInput={userInput} setUserInput={setUserInput} />
+            <DisplaySongs
+              getAllSongs={getAllSongs}
+              songs={songs}
+              userInput={userInput}
+            />
           </div>
         </div>
       </div>
