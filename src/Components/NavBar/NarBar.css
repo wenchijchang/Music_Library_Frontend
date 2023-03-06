@@ -1,4 +1,4 @@
-.navbar {
+.nav-bar {
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -6,6 +6,6 @@
   margin-bottom: 10em;
   background-color: royalblue;
 }
-.navbar h1 {
+.nav-bar h1 {
   color: white;
 }

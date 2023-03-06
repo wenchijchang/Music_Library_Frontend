@@ -24,7 +24,7 @@ function App() {
     <div>
       <NavBar />
       <div className="container">
-        <div className="row">
+        <div className="row flex">
           <div className="col-md-6">
             <div className="border-box">
               <AddNewSong getAllSongs={getAllSongs} />
